@@ -7,16 +7,54 @@
 
 import UIKit
 import CoreData
+import GoogleSignIn
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        GIDSignIn.sharedInstance().clientID = "1006278110384-uc0sic0isn4oc5q0ef8ambo0i2tsgkb1.apps.googleusercontent.com"
+               GIDSignIn.sharedInstance().delegate = self
+        
+        
         return true
     }
+    
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+               return GIDSignIn.sharedInstance().handle(url as URL?,
+                                                        sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication]as? String,
+                                                        annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+           }
+           func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+               if let error = error{
+               print("\(error.localizedDescription)")
+               }
+           else{
+               let userId = user.userID
+               let emailAddress = user.profile?.email
+
+               let fullName = user.profile?.name
+               let givenName = user.profile?.givenName
+               let familyName = user.profile?.familyName
+
+               let profilePicUrl = user.profile?.imageURL(withDimension: 320)
+               print (fullName)
+           }
+       }
+           func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+               print ("User has disconnected")
+           }
+           
+    
+    
+    
+    
 
     // MARK: UISceneSession Lifecycle
 

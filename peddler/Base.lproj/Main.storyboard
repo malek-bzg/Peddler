@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HVZ-kA-qOl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -451,6 +452,26 @@
             </objects>
             <point key="canvasLocation" x="3432" y="659"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5NP-WM-ZTX">
+            <objects>
+                <tabBarController id="tbV-gf-sU9" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tr3-YI-3VJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="S8X-b0-pAg" kind="relationship" relationship="viewControllers" id="2yN-6i-sHe"/>
+                        <segue destination="way-L6-Veh" kind="relationship" relationship="viewControllers" id="qVR-mg-Mej"/>
+                        <segue destination="t7z-WQ-Mqv" kind="relationship" relationship="viewControllers" id="Zi1-Ph-xRb"/>
+                        <segue destination="9l2-5h-av4" kind="relationship" relationship="viewControllers" id="C5Y-vn-Ulj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcK-sL-arN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2167" y="-711"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ESz-qA-Nyx">
             <objects>
@@ -460,7 +481,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unnamed" translatesAutoresizingMaskIntoConstraints="NO" id="03C-gD-Ayo">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="-15" y="-108" width="462" height="1004"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="prix" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cj9-Xb-F0p">
@@ -544,10 +565,11 @@
                         <viewLayoutGuide key="safeArea" id="mhP-nG-2uW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" image=" " id="76R-5s-Sl2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5B-uR-xHz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3416" y="-660"/>
+            <point key="canvasLocation" x="3415.9420289855075" y="-660.26785714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="T8K-4Q-fD3">
@@ -590,7 +612,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="cXd-AN-kK8">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cXd-AN-kK8" id="Q2J-hH-WZr">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -1007,7 +1029,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="YBp-pU-0ZY">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YBp-pU-0ZY" id="kOP-t9-h7R">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -1057,7 +1079,7 @@
             </objects>
             <point key="canvasLocation" x="2674" y="2054"/>
         </scene>
-        <!--User Home-->
+        <!--Item-->
         <scene sceneID="LyI-fm-hif">
             <objects>
                 <viewController id="S8X-b0-pAg" customClass="UserHome" customModule="peddler" customModuleProvider="target" sceneMemberID="viewController">
@@ -1134,32 +1156,22 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x4n-oc-9Es">
-                                <rect key="frame" x="0.0" y="27" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="Q5Q-Gg-yZ3"/>
-                                    <tabBarItem title="Item" id="SYf-yt-zBz"/>
-                                    <tabBarItem systemItem="more" id="iCQ-J2-eJY"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="t99-rI-QdG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="bNe-pl-M1O"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Searchbar" destination="OGu-ty-4c2" id="Isv-3c-5aq"/>
                         <outlet property="collection" destination="npF-3F-jzb" id="dpn-PP-ZDS"/>
                         <outlet property="profileImage" destination="fQM-i0-z0o" id="zTc-gO-Rk7"/>
-                        <outlet property="tabBar" destination="x4n-oc-9Es" id="Or9-eX-WMP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEf-X3-eXA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2742" y="102"/>
+            <point key="canvasLocation" x="2726" y="117"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lDz-av-Eq9">
@@ -1217,7 +1229,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h26-mg-LhQ">
-                                                    <rect key="frame" x="121" y="8" width="25" height="24"/>
+                                                    <rect key="frame" x="112" y="8" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </button>
                                             </subviews>
@@ -1240,7 +1252,7 @@
             </objects>
             <point key="canvasLocation" x="1994" y="1385"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="Uz7-TQ-vC8">
             <objects>
                 <viewController id="t7z-WQ-Mqv" sceneMemberID="viewController">
@@ -1280,7 +1292,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="eP7-4Q-n5B">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eP7-4Q-n5B" id="omM-8J-T4k">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -1325,6 +1337,7 @@
                         <viewLayoutGuide key="safeArea" id="83M-y4-Zcu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="r36-Qu-CTZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALw-ea-yjy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1371,7 +1384,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="FPy-Ho-zUT">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FPy-Ho-zUT" id="mnP-Ns-hFc">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -1519,7 +1532,7 @@
             </objects>
             <point key="canvasLocation" x="4850.7246376811599" y="-10.044642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="wfu-lk-jKF">
             <objects>
                 <viewController id="9l2-5h-av4" sceneMemberID="viewController">
@@ -1537,7 +1550,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="xGh-YI-qzj">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xGh-YI-qzj" id="Bre-Po-CHL">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -1577,7 +1590,7 @@
                                         <color key="backgroundColor" red="0.82240784170000003" green="0.95038813349999995" blue="0.90776103730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="WOD-GY-hvg">
-                                        <rect key="frame" x="0.0" y="108" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="124.5" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WOD-GY-hvg" id="wVk-Gw-cbF">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -1593,6 +1606,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" text="search" translatesAutoresizingMaskIntoConstraints="NO" id="enQ-Er-7IP">
+                                <rect key="frame" x="0.0" y="86" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ec-ZM-XTo">
                                 <rect key="frame" x="0.0" y="34" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -1600,15 +1618,11 @@
                                     <navigationItem title="Reclamation" id="EkU-tV-0YJ"/>
                                 </items>
                             </navigationBar>
-                            <searchBar contentMode="redraw" fixedFrame="YES" text="search" translatesAutoresizingMaskIntoConstraints="NO" id="enQ-Er-7IP">
-                                <rect key="frame" x="0.0" y="86" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mii-3M-UEg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="fcc-YL-YXF"/>
                     <navigationItem key="navigationItem" id="Anh-Db-kqj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJI-wo-m9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1690,6 +1704,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name=" " width="128" height="128"/>
         <image name="4146794" width="128" height="128"/>
         <image name="Capture.PNG1212" width="392" height="844"/>
         <image name="Peddler" width="502" height="496"/>

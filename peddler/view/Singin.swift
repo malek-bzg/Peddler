@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import GoogleSignIn
 
-class Singin: UIViewController {
+class Singin: UIViewController, GIDSignInUIDelegate {
     
     //var
     
@@ -26,6 +27,12 @@ class Singin: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+                  GIDSignIn.sharedInstance().signInSilently()
+                  let gSignIn = GIDSignInButton(frame: CGRect(x: 41, y: 700, width: 333, height: 100))
+                  view.addSubview(gSignIn)
 
         // Do any additional setup after loading the view.
     }
