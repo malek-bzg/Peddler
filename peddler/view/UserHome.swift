@@ -11,7 +11,7 @@ class UserHome: UIViewController {
     
     
     //var
-    
+    var username : String?
     
     
     //widget
@@ -19,12 +19,14 @@ class UserHome: UIViewController {
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var Searchbar: UISearchBar!
     
+    @IBOutlet weak var welcome: UITextView!
     
     
     //lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        welcome.text = "Welcome "+username!
         // Do any additional setup after loading the view.
     }
     

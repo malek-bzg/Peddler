@@ -7,5 +7,6 @@ target 'peddler' do
 
   # Pods for peddler
    pod 'GoogleSignIn', '< 5.0.0'
+   pod 'Alamofire', '~> 5.4'
 
 end

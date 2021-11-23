@@ -29,6 +29,7 @@
 		73A245262743023300EEC7B0 /* Singin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A245252743023300EEC7B0 /* Singin.swift */; };
 		73A245292743035E00EEC7B0 /* CreateNewAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A245282743035E00EEC7B0 /* CreateNewAccount.swift */; };
 		73A2452C2743061E00EEC7B0 /* UserHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2452B2743061E00EEC7B0 /* UserHome.swift */; };
+		82C2E1B8274C87290020C3D4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2E1B7274C87290020C3D4 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		73A245252743023300EEC7B0 /* Singin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singin.swift; sourceTree = "<group>"; };
 		73A245282743035E00EEC7B0 /* CreateNewAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccount.swift; sourceTree = "<group>"; };
 		73A2452B2743061E00EEC7B0 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
+		82C2E1B7274C87290020C3D4 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		C96F679A6D18F878F29DBD7B /* Pods_peddler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_peddler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				73A2450A2742DF6E00EEC7B0 /* MessageViewModel.swift */,
+				82C2E1B7274C87290020C3D4 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				73A244F62742DE6900EEC7B0 /* client.swift in Sources */,
 				73A244FC2742DE9300EEC7B0 /* fournisseur.swift in Sources */,
 				73A244FF2742DEA900EEC7B0 /* societe.swift in Sources */,
+				82C2E1B8274C87290020C3D4 /* UserViewModel.swift in Sources */,
 				73A245022742DEF000EEC7B0 /* facture.swift in Sources */,
 				735A2E5127367D2200A697F1 /* AppDelegate.swift in Sources */,
 				73A244F32742DE5300EEC7B0 /* users.swift in Sources */,
