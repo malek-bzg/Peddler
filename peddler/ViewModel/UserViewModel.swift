@@ -10,7 +10,7 @@ import Alamofire
 
 class UserViewModel {
         
-    func connexion(email : String?, password: String?) {
+    func connexion(username : String?, password: String?) {
        
     }
     
