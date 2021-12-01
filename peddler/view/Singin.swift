@@ -7,20 +7,24 @@
 
 import UIKit
 import GoogleSignIn
+import Alamofire
 
 class Singin: UIViewController, GIDSignInUIDelegate {
     
     //var
     
-    
-    
-    
-    
-    
+    let userViewModel = UserViewModel()
+
     //widget
-    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var UserName: UITextField!
+    @IBOutlet weak var Password: UITextField!
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Singin"{
+            let destination = segue.destination as! UserHome
+            destination.username = UserName.text
+        }
+    }
     
-    @IBOutlet weak var Password: UILabel!
     
     
     
@@ -42,6 +46,15 @@ class Singin: UIViewController, GIDSignInUIDelegate {
     @IBAction func forgetPass(_ sender: Any) {
     }
     @IBAction func sing(_ sender: Any) {
+        if (Password.text != UserName.text) {
+            return
+        }
+        var UserName = (
+        Name: UserName.text,
+        password: Password.text
+        )
+        performSegue(withIdentifier: "Singin", sender: nil)
+        
     }
     
     @IBAction func singUp(_ sender: Any) {

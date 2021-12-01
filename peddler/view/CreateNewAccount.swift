@@ -21,10 +21,9 @@ class CreateNewAccount: UIViewController {
     @IBOutlet weak var mail: UITextField!
     @IBOutlet weak var Adress: UITextField!
     @IBOutlet weak var Code: UITextField!
-    @IBOutlet weak var CIN: UITextField!
     @IBOutlet weak var Password: UITextField!
     @IBOutlet weak var ConfirmPass: UITextField!
-    
+    @IBOutlet weak var CIN: UITextField!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "accueilSegue"{
