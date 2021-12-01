@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HVZ-kA-qOl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -33,6 +33,9 @@
                                 <state key="normal" title="Get Started ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="6in-CC-0iI" kind="presentation" modalPresentationStyle="fullScreen" id="xOn-gJ-keE"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J9h-gk-M3A">
                                 <rect key="frame" x="15" y="555" width="384" height="175"/>
@@ -98,6 +101,7 @@
                                 </state>
                                 <connections>
                                     <action selector="user:" destination="6in-CC-0iI" eventType="touchUpInside" id="vXd-NM-uqm"/>
+                                    <segue destination="Hie-ay-Lyq" kind="presentation" modalPresentationStyle="fullScreen" id="qWw-da-rDp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhr-Il-EM9">
@@ -150,6 +154,7 @@
                             <constraint firstItem="hfb-fl-5E6" firstAttribute="top" secondItem="WyG-Ar-kJm" secondAttribute="top" id="tav-Th-GHH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7zz-rE-caO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQV-oB-VsH" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,12 +196,14 @@
                                 </state>
                                 <connections>
                                     <action selector="singIn:" destination="Hie-ay-Lyq" eventType="touchUpInside" id="Ywr-7e-Qaz"/>
+                                    <segue destination="HVZ-kA-qOl" kind="presentation" modalPresentationStyle="fullScreen" id="Y01-2K-umz"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XVb-12-63Y"/>
                         <color key="backgroundColor" red="0.91690856220000005" green="0.9977262616" blue="0.99673098329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="AxM-eh-6lP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Snf-I7-Nvg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,6 +285,7 @@
                         <viewLayoutGuide key="safeArea" id="Z8E-50-QPN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OuR-Os-5lI"/>
                     <connections>
                         <outlet property="Password" destination="2xq-zK-vsI" id="3Dc-LB-ek8"/>
                         <outlet property="userName" destination="3jo-xS-FjF" id="pZx-8v-IKa"/>
