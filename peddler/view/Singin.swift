@@ -8,26 +8,30 @@
 import UIKit
 import GoogleSignIn
 import Alamofire
+import Foundation
+
 
 class Singin: UIViewController, GIDSignInUIDelegate {
     
     //var
-    
+    var FirstName: String?
+    var username : String?
     let userViewModel = UserViewModel()
 
     //widget
-    @IBOutlet weak var UserName: UITextField!
-    @IBOutlet weak var Password: UITextField!
+    
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var PasswordTF: UITextField!
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Singin"{
+        if segue.identifier == "loginsgue"{
             let destination = segue.destination as! UserHome
-            destination.username = UserName.text
+            destination.username = self.username
         }
     }
     
     
-    
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,15 +50,24 @@ class Singin: UIViewController, GIDSignInUIDelegate {
     @IBAction func forgetPass(_ sender: Any) {
     }
     @IBAction func sing(_ sender: Any) {
-        if (Password.text != UserName.text) {
-            return
-        }
-        var UserName = (
-        Name: UserName.text,
-        password: Password.text
-        )
-        performSegue(withIdentifier: "Singin", sender: nil)
+         
         
+       // var UserName = (
+       // email: emailTF.text,
+       // password: PasswordTF.text)
+        
+       NetworkingService().connection(email:emailTF.text!, password:PasswordTF.text! ) { h, user in
+        //let us = user!
+       // self.username = us.FirstName
+            if h {
+                print("you are connected")
+                self.performSegue(withIdentifier: "loginsgue", sender: self.username)
+            }else{
+                print("you are  connected")
+                
+            }
+        }
+
     }
     
     @IBAction func singUp(_ sender: Any) {

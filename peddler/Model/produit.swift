@@ -8,18 +8,19 @@
 import Foundation
 
 struct produit{
+    internal init(prix: String?=nil, marge: String?=nil, produitName: String?=nil, information: String?=nil) {
+        self.prix = prix
+        self.marge = marge
+        self.produitName = produitName
+        self.information = information
+    }
     
-    let phoneNumber: String?
-    let produitPicture: String?
+    
+    let prix: String?
+    let marge: String?
+    //let produitPicture: String?
     let produitName: String?
     let information: String?
     
-    init(phoneNumber: String?, produitPicture: String?, produitName: String?, information: String?){
-        
-        self.phoneNumber = "phoneNumber"
-        self.produitPicture = "produitPicture"
-        self.produitName = "produitName"
-        self.information = "information"
-        
-    }
-}
+    
+} 

@@ -7,28 +7,34 @@
 
 import UIKit
 import Alamofire
+import Foundation
 
 class CreateNewAccount: UIViewController {
     
 
     //var
-    let userViewModel = UserViewModel()
+    var username : String?
+    
+    
     
     
     //widget
-    @IBOutlet weak var Name: UITextField!
-    @IBOutlet weak var Number: UITextField!
-    @IBOutlet weak var mail: UITextField!
-    @IBOutlet weak var Adress: UITextField!
-    @IBOutlet weak var Code: UITextField!
-    @IBOutlet weak var Password: UITextField!
+    @IBOutlet weak var FirstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
     @IBOutlet weak var ConfirmPass: UITextField!
     @IBOutlet weak var CIN: UITextField!
+    @IBOutlet weak var profilePicture: UITextField!
+    @IBOutlet weak var isadminSwitch: UISwitch!
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "accueilSegue"{
+        if segue.identifier == "inscriptionSegue"{
             let destination = segue.destination as! UserHome
-            destination.username = Name.text
+            destination.username = self.username
         }
     }
     
@@ -61,21 +67,22 @@ class CreateNewAccount: UIViewController {
     
     @IBAction func Register(_ sender: Any) {
         
-        if (Password.text != ConfirmPass.text) {
-            return
+        username = FirstName.text
+        let user = users(email: email.text, password: password.text, phoneNumber: Int((phoneNumber.text)!), profilePicture: profilePicture.text,  FirstName: FirstName.text, lastName: lastName.text, ConfirmPass: ConfirmPass.text, CIN: CIN.text, isadmin: isadminSwitch.isOn)
+         
+        SignUp().inscription(user: user) { (succes) in
+            if succes {
+                print("add with sucsses")
+                self.performSegue(withIdentifier: "inscriptionSegue", sender: self.username)
+            }else{
+                print("failed")
+                
+            }
         }
         
-        var user = users(
-            email: mail.text,
-            password: Password.text,
-            phoneNumber: Number.text,
-            profilePicture: nil,
-            FirstName: Name.text,
-            lastName: nil
-        )
-        
-        //userViewModel.inscription(user: user)
-        performSegue(withIdentifier: "accueilSegue", sender: nil)
+          
+
+     }
         
     }
-}
+

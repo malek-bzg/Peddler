@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3042160CD49F0FE1CD551444 /* Pods_peddler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F679A6D18F878F29DBD7B /* Pods_peddler.framework */; };
-		4FFC58532757E044009DC7F9 /* NetworkinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC58522757E044009DC7F9 /* NetworkinService.swift */; };
+		4FFC58552757E1FB009DC7F9 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC58542757E1FB009DC7F9 /* NetworkingService.swift */; };
 		735A2E5127367D2200A697F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735A2E5027367D2200A697F1 /* AppDelegate.swift */; };
 		735A2E5327367D2200A697F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735A2E5227367D2200A697F1 /* SceneDelegate.swift */; };
 		735A2E5827367D2200A697F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735A2E5627367D2200A697F1 /* Main.storyboard */; };
@@ -30,6 +30,9 @@
 		73A245262743023300EEC7B0 /* Singin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A245252743023300EEC7B0 /* Singin.swift */; };
 		73A245292743035E00EEC7B0 /* CreateNewAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A245282743035E00EEC7B0 /* CreateNewAccount.swift */; };
 		73A2452C2743061E00EEC7B0 /* UserHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2452B2743061E00EEC7B0 /* UserHome.swift */; };
+		7B3A4E3C275EB86800A1B526 /* AddProduitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3A4E3B275EB86800A1B526 /* AddProduitViewController.swift */; };
+		7B3A4E46275EC19500A1B526 /* produitt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3A4E45275EC19500A1B526 /* produitt.swift */; };
+		7B6666D0275A6575005A0085 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6666CF275A6575005A0085 /* SignUp.swift */; };
 		82C2E1B8274C87290020C3D4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2E1B7274C87290020C3D4 /* UserViewModel.swift */; };
 		CE2C09A927543F610020A4E9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C09A827543F610020A4E9 /* MapViewController.swift */; };
 		CE756FAD27515ED700CDFE55 /* Mapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE756FAC27515ED700CDFE55 /* Mapview.swift */; };
@@ -37,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		4124C587CFD541822891E598 /* Pods-peddler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-peddler.debug.xcconfig"; path = "Target Support Files/Pods-peddler/Pods-peddler.debug.xcconfig"; sourceTree = "<group>"; };
-		4FFC58522757E044009DC7F9 /* NetworkinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkinService.swift; sourceTree = "<group>"; };
+		4FFC58542757E1FB009DC7F9 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		5E677FF1ACB9E3E9F6B55BFD /* Pods-peddler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-peddler.release.xcconfig"; path = "Target Support Files/Pods-peddler/Pods-peddler.release.xcconfig"; sourceTree = "<group>"; };
 		735A2E4D27367D2200A697F1 /* peddler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = peddler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		735A2E5027367D2200A697F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +65,9 @@
 		73A245252743023300EEC7B0 /* Singin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singin.swift; sourceTree = "<group>"; };
 		73A245282743035E00EEC7B0 /* CreateNewAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccount.swift; sourceTree = "<group>"; };
 		73A2452B2743061E00EEC7B0 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
+		7B3A4E3B275EB86800A1B526 /* AddProduitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProduitViewController.swift; sourceTree = "<group>"; };
+		7B3A4E45275EC19500A1B526 /* produitt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = produitt.swift; sourceTree = "<group>"; };
+		7B6666CF275A6575005A0085 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		82C2E1B7274C87290020C3D4 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		C96F679A6D18F878F29DBD7B /* Pods_peddler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_peddler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2C09A827543F610020A4E9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +132,6 @@
 		73A244EB2742DD3C00EEC7B0 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				4FFC58522757E044009DC7F9 /* NetworkinService.swift */,
 				73A2451C2742F10B00EEC7B0 /* Accueil.swift */,
 				73A2451F2742FF5D00EEC7B0 /* Start.swift */,
 				73A245222743015000EEC7B0 /* Connection.swift */,
@@ -135,6 +140,7 @@
 				73A2452B2743061E00EEC7B0 /* UserHome.swift */,
 				CE756FAC27515ED700CDFE55 /* Mapview.swift */,
 				CE2C09A827543F610020A4E9 /* MapViewController.swift */,
+				7B3A4E3B275EB86800A1B526 /* AddProduitViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -142,8 +148,11 @@
 		73A244EC2742DDDB00EEC7B0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4FFC58542757E1FB009DC7F9 /* NetworkingService.swift */,
 				73A2450A2742DF6E00EEC7B0 /* MessageViewModel.swift */,
 				82C2E1B7274C87290020C3D4 /* UserViewModel.swift */,
+				7B6666CF275A6575005A0085 /* SignUp.swift */,
+				7B3A4E45275EC19500A1B526 /* produitt.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -307,23 +316,26 @@
 				73A244F92742DE8100EEC7B0 /* commandes.swift in Sources */,
 				73A2452C2743061E00EEC7B0 /* UserHome.swift in Sources */,
 				73A245292743035E00EEC7B0 /* CreateNewAccount.swift in Sources */,
-				4FFC58532757E044009DC7F9 /* NetworkinService.swift in Sources */,
 				73A245082742DF1D00EEC7B0 /* stock.swift in Sources */,
 				73A245202742FF5D00EEC7B0 /* Start.swift in Sources */,
 				735A2E5B27367D2200A697F1 /* peddler.xcdatamodeld in Sources */,
 				73A2451D2742F10B00EEC7B0 /* Accueil.swift in Sources */,
 				73A2450B2742DF6E00EEC7B0 /* MessageViewModel.swift in Sources */,
+				7B3A4E3C275EB86800A1B526 /* AddProduitViewController.swift in Sources */,
 				73A245052742DF0400EEC7B0 /* produit.swift in Sources */,
 				73A245232743015000EEC7B0 /* Connection.swift in Sources */,
 				73A244F62742DE6900EEC7B0 /* client.swift in Sources */,
 				73A244FC2742DE9300EEC7B0 /* fournisseur.swift in Sources */,
 				73A244FF2742DEA900EEC7B0 /* societe.swift in Sources */,
+				7B6666D0275A6575005A0085 /* SignUp.swift in Sources */,
 				CE2C09A927543F610020A4E9 /* MapViewController.swift in Sources */,
 				CE756FAD27515ED700CDFE55 /* Mapview.swift in Sources */,
 				82C2E1B8274C87290020C3D4 /* UserViewModel.swift in Sources */,
 				73A245022742DEF000EEC7B0 /* facture.swift in Sources */,
 				735A2E5127367D2200A697F1 /* AppDelegate.swift in Sources */,
 				73A244F32742DE5300EEC7B0 /* users.swift in Sources */,
+				4FFC58552757E1FB009DC7F9 /* NetworkingService.swift in Sources */,
+				7B3A4E46275EC19500A1B526 /* produitt.swift in Sources */,
 				735A2E5327367D2200A697F1 /* SceneDelegate.swift in Sources */,
 				73A245262743023300EEC7B0 /* Singin.swift in Sources */,
 			);
