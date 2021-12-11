@@ -14,7 +14,5 @@ class UserViewModel {
        
     }
     
-    func inscription(user: users?) {
-       
-    }
+   
 

@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 import Foundation
 
-class AddProduitViewController: UIViewController {
+class AddProduitViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     
     
@@ -18,7 +18,7 @@ class AddProduitViewController: UIViewController {
     
     
     
-    
+    var currentImage = UIImage()
     
     
     
@@ -27,6 +27,7 @@ class AddProduitViewController: UIViewController {
     @IBOutlet weak var prix: UITextField!
     @IBOutlet weak var marge: UITextField!
     @IBOutlet weak var information: UITextField!
+    @IBOutlet weak var produitImage: UIImageView!
     
     
 
@@ -37,11 +38,79 @@ class AddProduitViewController: UIViewController {
     }
     
     //Action
+    @IBAction func addprodImage(_ sender: Any) {
+        showPhotoAlert()
+        performSegue(withIdentifier: "addSegue", sender: prix.text!)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addSegue" {
+            let destination = segue.destination as! UserHome
+            
+        
+            
+    
+        
+        }
+        }
+    func showPhotoAlert(){
+            let alert = UIAlertController(title: "Take Photo From", message: nil, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {action
+                in
+                self.getPhoto(type: .camera)
+                
+               
+                
+                
+            }))
+            alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {action
+                in
+                self.getPhoto(type: .photoLibrary)
+                
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alert,animated: true)
+        }
+        
+        
+        
+        
+        
+        func getPhoto (type : UIImagePickerController.SourceType){
+            let picker = UIImagePickerController()
+            picker.sourceType = type
+            picker.allowsEditing = true
+            picker.delegate = self
+            present(picker, animated: true, completion: nil)
+        }
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            dismiss(animated: true, completion: nil)
+            guard let image = info[.editedImage] as? UIImage else {
+                print("image not found")
+                return
+            }
+            
+            produitImage.image = image
+            currentImage = image
+        }
+        
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            dismiss(animated: true, completion: nil)
+        }
+    
+    
+    
+    
     @IBAction func Add(_ sender: Any) {
         
         
         let prod = produit(prix: prix.text, marge: marge.text, produitName: produitName.text, information: information.text)
-        Produitt().addProduit(produit: prod) { (succes) in
+        Produitt().addProduit(produit: prod, uiImage: currentImage) { (succes) in
             if succes {
                 print("add with sucsses")
                 

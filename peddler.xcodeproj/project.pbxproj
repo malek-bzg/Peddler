@@ -32,6 +32,7 @@
 		73A2452C2743061E00EEC7B0 /* UserHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2452B2743061E00EEC7B0 /* UserHome.swift */; };
 		7B3A4E3C275EB86800A1B526 /* AddProduitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3A4E3B275EB86800A1B526 /* AddProduitViewController.swift */; };
 		7B3A4E46275EC19500A1B526 /* produitt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3A4E45275EC19500A1B526 /* produitt.swift */; };
+		7B5F96812763861300E6F0FF /* GetallProduit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F96802763861300E6F0FF /* GetallProduit.swift */; };
 		7B6666D0275A6575005A0085 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6666CF275A6575005A0085 /* SignUp.swift */; };
 		82C2E1B8274C87290020C3D4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2E1B7274C87290020C3D4 /* UserViewModel.swift */; };
 		CE2C09A927543F610020A4E9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C09A827543F610020A4E9 /* MapViewController.swift */; };
@@ -67,6 +68,7 @@
 		73A2452B2743061E00EEC7B0 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
 		7B3A4E3B275EB86800A1B526 /* AddProduitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProduitViewController.swift; sourceTree = "<group>"; };
 		7B3A4E45275EC19500A1B526 /* produitt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = produitt.swift; sourceTree = "<group>"; };
+		7B5F96802763861300E6F0FF /* GetallProduit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetallProduit.swift; sourceTree = "<group>"; };
 		7B6666CF275A6575005A0085 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		82C2E1B7274C87290020C3D4 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		C96F679A6D18F878F29DBD7B /* Pods_peddler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_peddler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 				82C2E1B7274C87290020C3D4 /* UserViewModel.swift */,
 				7B6666CF275A6575005A0085 /* SignUp.swift */,
 				7B3A4E45275EC19500A1B526 /* produitt.swift */,
+				7B5F96802763861300E6F0FF /* GetallProduit.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				73A244F62742DE6900EEC7B0 /* client.swift in Sources */,
 				73A244FC2742DE9300EEC7B0 /* fournisseur.swift in Sources */,
 				73A244FF2742DEA900EEC7B0 /* societe.swift in Sources */,
+				7B5F96812763861300E6F0FF /* GetallProduit.swift in Sources */,
 				7B6666D0275A6575005A0085 /* SignUp.swift in Sources */,
 				CE2C09A927543F610020A4E9 /* MapViewController.swift in Sources */,
 				CE756FAD27515ED700CDFE55 /* Mapview.swift in Sources */,

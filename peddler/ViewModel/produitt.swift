@@ -13,20 +13,27 @@ import SwiftyJSON
 
 public class Produitt{
     
-
-func addProduit(produit: produit, completed: @escaping (Bool) -> Void) {
-    AF.request("http://localhost:3000/produit",
-               method: .post,
-               parameters: [
+    
+    func addProduit(produit: produit, uiImage: UIImage, completed: @escaping (Bool) -> Void ) {
+        
+        AF.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(uiImage.jpegData(compressionQuality: 0.5)!, withName: "image" , fileName: "image.jpeg", mimeType: "image/jpeg")
+            
+            for (key, value) in
+            [
                 "produitName": produit.produitName!,
                 "marge": produit.marge!,
                 "prix": produit.prix!,
                 "information": produit.information!
                 
-                
-                
-               ])
-        .validate(statusCode: 200..<600)
+            ]
+            {
+                multipartFormData.append((value.data(using: .utf8))!, withName: key)
+            }
+            
+        },to: "http://localhost:3000/produit",
+        method: .post)
+        .validate(statusCode: 200..<300)
         .validate(contentType: ["application/json"])
         .responseData { response in
             switch response.result {
@@ -50,23 +57,23 @@ func addProduit(produit: produit, completed: @escaping (Bool) -> Void) {
                 completed(false)
             }
         }
-}
+    }
 
-
-func makeItem(jsonItem: JSON) -> produit {
-    //let isoDate = jsonItem["dateNaissance"]
     
-    return produit(
+    func makeItem(jsonItem: JSON) -> produit {
+        //let isoDate = jsonItem["dateNaissance"]
         
-        prix: jsonItem["prix"].stringValue,
-        marge: jsonItem["marge"].stringValue,
-        produitName: jsonItem["produitName"].stringValue,
-        information: jsonItem["information"].stringValue
-        
-        //token: jsonItem["token"].stringValue
-        
-        
-    )
-}
-
+        return produit(
+            
+            prix: jsonItem["prix"].stringValue,
+            marge: jsonItem["marge"].stringValue,
+            produitName: jsonItem["produitName"].stringValue,
+            information: jsonItem["information"].stringValue
+            
+            //token: jsonItem["token"].stringValue
+            
+            
+        )
+    }
+    
 }
