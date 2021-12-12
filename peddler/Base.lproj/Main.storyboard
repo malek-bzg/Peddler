@@ -445,7 +445,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOz-jI-lTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7055.0724637681169" y="672.99107142857144"/>
+            <point key="canvasLocation" x="7072" y="798"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5NP-WM-ZTX">
@@ -1219,8 +1219,9 @@
                                 <rect key="frame" x="0.0" y="455" width="414" height="433"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.82240784170000003" green="0.95038813349999995" blue="0.90776103730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rHd-eA-Txm">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rHd-eA-Txm">
                                     <size key="itemSize" width="194" height="184"/>
+                                    <size key="estimatedItemSize" width="194" height="184"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1300,8 +1301,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Searchbar" destination="OGu-ty-4c2" id="Isv-3c-5aq"/>
-                        <outlet property="collection" destination="npF-3F-jzb" id="dpn-PP-ZDS"/>
-                        <outlet property="produitCollectionView" destination="npF-3F-jzb" id="TwM-6V-6mC"/>
+                        <outlet property="produitCollectionView" destination="npF-3F-jzb" id="XAa-Nd-glc"/>
                         <outlet property="userImage" destination="Zqv-hN-ArS" id="XUP-a1-UGX"/>
                         <outlet property="welcome" destination="kTb-LI-VKu" id="fbO-pc-Mr9"/>
                     </connections>
@@ -1388,6 +1388,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIo-19-qJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1994" y="1385"/>
+        </scene>
+        <!--Paypal-->
+        <scene sceneID="gCQ-5k-wR1">
+            <objects>
+                <viewController id="bgr-5k-MgX" customClass="paypal" customModule="peddler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eL1-2t-n0B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unnamed" translatesAutoresizingMaskIntoConstraints="NO" id="HsO-Ye-fvU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.67688107490000005" green="0.82410722970000005" blue="0.71460193400000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1h-P5-RiK">
+                                <rect key="frame" x="66" y="717" width="315" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.67688107490000005" green="0.82410722970000005" blue="0.71460193400000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="pay">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clikedBtnpay:" destination="bgr-5k-MgX" eventType="touchUpInside" id="iD3-Nu-G3N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xBq-NS-ZVi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sev-J5-BaB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7231.884057971015" y="116.51785714285714"/>
         </scene>
         <!--Item-->
         <scene sceneID="Uz7-TQ-vC8">

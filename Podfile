@@ -10,6 +10,7 @@ target 'peddler' do
    pod 'Alamofire', '~> 5.4'
    pod 'SwiftyJSON', '~> 4.0'
    pod 'AlamofireImage', '~> 4.1'
+   pod 'Braintree', '~> 4.22.0'
 
 
 end

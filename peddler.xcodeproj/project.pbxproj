@@ -34,6 +34,8 @@
 		7B3A4E46275EC19500A1B526 /* produitt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3A4E45275EC19500A1B526 /* produitt.swift */; };
 		7B5F96812763861300E6F0FF /* GetallProduit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F96802763861300E6F0FF /* GetallProduit.swift */; };
 		7B6666D0275A6575005A0085 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6666CF275A6575005A0085 /* SignUp.swift */; };
+		7BDE3885276629AE0084B4CF /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDE3884276629AE0084B4CF /* home.swift */; };
+		7BDE38882766930C0084B4CF /* paypal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDE38872766930C0084B4CF /* paypal.swift */; };
 		82C2E1B8274C87290020C3D4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2E1B7274C87290020C3D4 /* UserViewModel.swift */; };
 		CE2C09A927543F610020A4E9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C09A827543F610020A4E9 /* MapViewController.swift */; };
 		CE756FAD27515ED700CDFE55 /* Mapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE756FAC27515ED700CDFE55 /* Mapview.swift */; };
@@ -70,6 +72,8 @@
 		7B3A4E45275EC19500A1B526 /* produitt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = produitt.swift; sourceTree = "<group>"; };
 		7B5F96802763861300E6F0FF /* GetallProduit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetallProduit.swift; sourceTree = "<group>"; };
 		7B6666CF275A6575005A0085 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		7BDE3884276629AE0084B4CF /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
+		7BDE38872766930C0084B4CF /* paypal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paypal.swift; sourceTree = "<group>"; };
 		82C2E1B7274C87290020C3D4 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		C96F679A6D18F878F29DBD7B /* Pods_peddler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_peddler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2C09A827543F610020A4E9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				CE756FAC27515ED700CDFE55 /* Mapview.swift */,
 				CE2C09A827543F610020A4E9 /* MapViewController.swift */,
 				7B3A4E3B275EB86800A1B526 /* AddProduitViewController.swift */,
+				7BDE3884276629AE0084B4CF /* home.swift */,
+				7BDE38872766930C0084B4CF /* paypal.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				73A245082742DF1D00EEC7B0 /* stock.swift in Sources */,
 				73A245202742FF5D00EEC7B0 /* Start.swift in Sources */,
 				735A2E5B27367D2200A697F1 /* peddler.xcdatamodeld in Sources */,
+				7BDE38882766930C0084B4CF /* paypal.swift in Sources */,
 				73A2451D2742F10B00EEC7B0 /* Accueil.swift in Sources */,
 				73A2450B2742DF6E00EEC7B0 /* MessageViewModel.swift in Sources */,
 				7B3A4E3C275EB86800A1B526 /* AddProduitViewController.swift in Sources */,
@@ -340,6 +347,7 @@
 				73A244F32742DE5300EEC7B0 /* users.swift in Sources */,
 				4FFC58552757E1FB009DC7F9 /* NetworkingService.swift in Sources */,
 				7B3A4E46275EC19500A1B526 /* produitt.swift in Sources */,
+				7BDE3885276629AE0084B4CF /* home.swift in Sources */,
 				735A2E5327367D2200A697F1 /* SceneDelegate.swift in Sources */,
 				73A245262743023300EEC7B0 /* Singin.swift in Sources */,
 			);

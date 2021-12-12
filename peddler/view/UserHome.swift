@@ -76,7 +76,7 @@ class UserHome: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     override func viewDidLoad() {
         super.viewDidLoad()
         loadExercises()
-       // loadProfileImage()
+        loadProfileImage()
 
         
       
@@ -91,9 +91,9 @@ class UserHome: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             switch response.result{
                 
             case .success:
-               // print(response)
+                print(response)
                 let myresult = try? JSON(data: response.data!)
-              //  print(myresult)
+               print(myresult)
                 produitName.removeAll()
                 prixx.removeAll()
                 produitImagee.removeAll()
@@ -103,13 +103,13 @@ class UserHome: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                     //print(i)
                     let nom = i["produitName"].stringValue
                     let prix = i["prix"].stringValue
-                    let produitImage = "http://localhost:3000/produit/"+i["produitImage"].stringValue
+                    let produitImage = "http://localhost:3000/produit"+i["produitImage"].stringValue
                     produitName.append(nom)
                     prixx.append(prix)
                     produitImagee.append(produitImage)
-           //     print(i["produitName"].stringValue)
+               print(i["produitName"].stringValue)
                 };
-             //   print(produitName)
+                print(produitName)
                 produitCollectionView.reloadData()
                 break
             case .failure:
@@ -120,13 +120,13 @@ class UserHome: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         }
     }
     
-   /*func loadProfileImage()  {
+   func loadProfileImage()  {
         AF.request("http://localhost:3000/produit", method: .get).responseJSON{
             response in
             switch response.result{
                 
             case .success:
-               // print(response)
+                print(response)
                 let myresult = try? JSON(data: response.data!)
                 print(myresult)
                
@@ -134,9 +134,9 @@ class UserHome: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                 
                 
                 for i in myresult!.arrayValue {
-                    //print(i)
+                    print(i)
                     
-                    let produitImage = "http://localhost:3000/produit/"+i["produitImage"].stringValue
+                    let produitImage = "http://localhost:3000/produit"+i["produitImage"].stringValue
                   //  print(image)
 
                     self.produitImagee.append(produitImage)
@@ -150,7 +150,7 @@ class UserHome: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             }
         }
         
-    }*/
+    }
     
     
 

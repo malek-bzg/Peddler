@@ -8,6 +8,8 @@
 import UIKit
 import CoreData
 import GoogleSignIn
+import Braintree
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -16,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        BTAppSwitch.setReturnURLScheme("com.peddler.payments")
         
         GIDSignIn.sharedInstance().clientID = "1006278110384-uc0sic0isn4oc5q0ef8ambo0i2tsgkb1.apps.googleusercontent.com"
                GIDSignIn.sharedInstance().delegate = self
@@ -30,6 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                return GIDSignIn.sharedInstance().handle(url as URL?,
                                                         sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication]as? String,
                                                         annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+        if url.scheme?.localizedCaseInsensitiveCompare("com.peddler.payments") == .orderedSame {
+            return BTAppSwitch.handleOpen(url, options: options)
+        }
+        return false
            }
            func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
                if let error = error{
@@ -115,5 +122,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }
     }
 
-}
+    }
+
+
 
