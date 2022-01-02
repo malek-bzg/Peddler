@@ -4,9 +4,11 @@
 //
 //  Created by User on 26.11.2021.
 //
+
 import UIKit
 import MapKit
 import CoreLocation
+
 class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
 
     @IBOutlet weak var sos: MKMapView!

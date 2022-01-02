@@ -6,21 +6,12 @@
 //
 
 import UIKit
-import Alamofire
 import Foundation
 
 class AddProduitViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
-    
-    
-    
     //var
-    
-    
-    
     var currentImage = UIImage()
-    
-    
     
     //widget
     @IBOutlet weak var produitName: UITextField!
@@ -30,78 +21,58 @@ class AddProduitViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var produitImage: UIImageView!
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
     //Action
     @IBAction func addprodImage(_ sender: Any) {
         showPhotoAlert()
-        performSegue(withIdentifier: "addSegue", sender: prix.text!)
-        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addSegue" {
-            let destination = segue.destination as! UserHome
-            
-        
-            
-    
-        
-        }
-        }
     func showPhotoAlert(){
-            let alert = UIAlertController(title: "Take Photo From", message: nil, preferredStyle: .actionSheet)
-            alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {action
-                in
-                self.getPhoto(type: .camera)
-                
-               
-                
-                
-            }))
-            alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {action
-                in
-                self.getPhoto(type: .photoLibrary)
-                
-            }))
+        let alert = UIAlertController(title: "Take Photo From", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {action
+            in
+            self.getPhoto(type: .camera)
+        }))
+        alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {action
+            in
+            self.getPhoto(type: .photoLibrary)
             
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         present(alert,animated: true)
+    }
+    
+    func getPhoto (type : UIImagePickerController.SourceType){
+        let picker = UIImagePickerController()
+        picker.sourceType = type
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        dismiss(animated: true, completion: nil)
+        guard let image = info[.editedImage] as? UIImage else {
+            print("image not found")
+            return
         }
         
-        
-        
-        
-        
-        func getPhoto (type : UIImagePickerController.SourceType){
-            let picker = UIImagePickerController()
-            picker.sourceType = type
-            picker.allowsEditing = true
-            picker.delegate = self
-            present(picker, animated: true, completion: nil)
-        }
-        
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            dismiss(animated: true, completion: nil)
-            guard let image = info[.editedImage] as? UIImage else {
-                print("image not found")
-                return
-            }
-            
-            produitImage.image = image
-            currentImage = image
-        }
-        
-        
-        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            dismiss(animated: true, completion: nil)
-        }
+        produitImage.image = image
+        currentImage = image
+    }
+    
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
     
@@ -109,19 +80,19 @@ class AddProduitViewController: UIViewController, UIImagePickerControllerDelegat
     @IBAction func Add(_ sender: Any) {
         
         
-        let prod = produit(prix: prix.text, marge: marge.text, produitName: produitName.text, information: information.text)
-        Produitt().addProduit(produit: prod, uiImage: currentImage) { (succes) in
+        let produit = Produit(name: produitName.text!, imagePath: "", price: Float(prix.text!)!, marge: marge.text!, information: information.text!)
+        
+        ProduitViewModel.sharedInstance.add(produit: produit, uiImage: currentImage) { (succes) in
             if succes {
-                print("add with sucsses")
-                
+                self.present(Alert.makeSingleActionAlert(titre: "Success", message: "Added successfully", action: UIAlertAction(title: "Proceed", style: .default, handler: { UIAlertAction in
+                    self.navigationController?.popViewController(animated: true)
+                })), animated: true)
             }else{
                 print("failed")
-                
             }
         }
     }
     
 }
-
 
 

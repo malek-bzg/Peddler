@@ -7,72 +7,112 @@
 
 import UIKit
 import GoogleSignIn
-import Alamofire
 import Foundation
+import LocalAuthentication
 
 
-class Singin: UIViewController, GIDSignInUIDelegate {
+class Singin: UIViewController {
     
     //var
-    var FirstName: String?
-    var username : String?
-    let userViewModel = UserViewModel()
-
+    let signInConfig = GIDConfiguration.init(clientID: "637487609737-vh73udhpjmfu09qj0v5qcehck1l35hjs.apps.googleusercontent.com")
+    let googleLoginButton = GIDSignInButton()
+    
     //widget
-    
     @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var PasswordTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var googleSignInStackView: UIStackView!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "loginsgue"{
-            let destination = segue.destination as! UserHome
-            destination.username = self.username
-        }
-    }
-    
-    
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        GIDSignIn.sharedInstance().uiDelegate = self
-                  GIDSignIn.sharedInstance().signInSilently()
-                  let gSignIn = GIDSignInButton(frame: CGRect(x: 41, y: 700, width: 333, height: 100))
-                  view.addSubview(gSignIn)
-
-        // Do any additional setup after loading the view.
+        googleSignInStackView.addSubview(googleLoginButton)
+        googleLoginButton.addTarget(self, action: #selector(googleSignIn), for: .touchUpInside)
     }
     
-
+    @objc func googleSignIn() {
+        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { [self] user, error in
+            guard error == nil else { return }
+            guard let user = user else { return }
+            
+            UserViewModel.sharedInstance.loginWithSocialApp(email: user.profile!.email, firstName: (user.profile?.givenName)!, lastName: (user.profile?.familyName)!) { success, user in
+                if success {
+                    print("you are connected")
+                    if user?.role == "Client" {
+                        self.performSegue(withIdentifier: "loginUserSegue", sender: nil)
+                    } else {
+                        self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+                    }
+                    
+                } else {
+                    self.present(Alert.makeAlert(titre: "Error", message: "Invalid credentials"), animated: true)
+                }
+            }
+        }
+    }
+    
     //Action
     @IBAction func forgetPass(_ sender: Any) {
     }
+    
     @IBAction func sing(_ sender: Any) {
-         
-        
-       // var UserName = (
-       // email: emailTF.text,
-       // password: PasswordTF.text)
-        
-       NetworkingService().connection(email:emailTF.text!, password:PasswordTF.text! ) { h, user in
-        //let us = user!
-       // self.username = us.FirstName
-            if h {
+        UserViewModel.sharedInstance.login(email: emailTF.text!, password: passwordTF.text!) { success in
+            if success {
                 print("you are connected")
-                self.performSegue(withIdentifier: "loginsgue", sender: self.username)
-            }else{
-                print("you are  connected")
-                
+                if UserDefaults.standard.string(forKey: "role") == "Client" {
+                    self.performSegue(withIdentifier: "loginUserSegue", sender: nil)
+                } else {
+                    self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+                }
+            } else {
+                self.present(Alert.makeAlert(titre: "Error", message: "Invalid credentials"), animated: true)
             }
         }
+    }
+    
+    @IBAction func touchIdLogin(_ sender: Any) {
 
-    }
-    
-    @IBAction func singUp(_ sender: Any) {
-    }
-    
-    
-    
+            
+
+            let localString = "Biometric Authentication"
+
+            let context = LAContext()
+
+               var error: NSError?
+
+
+
+               if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+
+                   let reason = "Identify yourself!"
+
+
+
+                   context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+
+                       [weak self] success, authenticationError in
+
+
+
+                       DispatchQueue.main.async {
+
+                           if success {
+
+                               self!.performSegue(withIdentifier: "homeSegue", sender: IndexPath.self)
+
+                           } else {
+
+                               // error
+
+                           }
+
+                       }
+
+                   }
+
+               } else {
+
+                   // no biometry
+
+        }
+}
 }

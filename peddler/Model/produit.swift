@@ -7,21 +7,21 @@
 
 import Foundation
 
-struct produit{
-    internal init(prix: String?=nil, marge: String?=nil, produitName: String?=nil, information: String?=nil, produitImage: String?=nil) {
-        self.prix = prix
+struct Produit{
+    
+    internal init(_id: String? = nil, name: String, imagePath: String, price: Float, marge: String, information: String) {
+        self._id = _id
+        self.name = name
+        self.imagePath = imagePath
+        self.price = price
         self.marge = marge
-        self.produitName = produitName
         self.information = information
-        self.produitImage = produitImage
     }
     
-    
-    let prix: String?
-    let marge: String?
-    let produitImage: String?
-    let produitName: String?
-    let information: String?
-    
-    
+    var _id: String?
+    var name: String
+    var imagePath: String
+    var price: Float
+    var marge: String
+    var information: String
 } 

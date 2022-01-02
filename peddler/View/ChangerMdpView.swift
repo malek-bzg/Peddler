@@ -1,13 +1,13 @@
 //
-//  GetallProduit.swift
+//  ChangerMdpView.swift
 //  peddler
 //
-//  Created by Mac-Mini-2021 on 10/12/2021.
+//  Created by iMac on 2/1/2022.
 //
 
 import UIKit
 
-class GetallProduit: UIViewController {
+class ChangerMdpView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

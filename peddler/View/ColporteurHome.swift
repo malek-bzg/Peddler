@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserHome: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+class ColporteurHome: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
     //var
     var produits: [Produit] = []
@@ -144,35 +144,4 @@ class UserHome: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     @IBAction func logout(_ sender: Any) {
         
     }
-    @IBOutlet weak var switchthemeBtn: UIButton!
-
-        
-
-        @IBAction func modeSwitcher(_ sender: Any) {
-
-            let window = UIApplication.shared.keyWindow
-
-                if #available(iOS 13.0, *) {
-
-                    if window?.overrideUserInterfaceStyle == .dark {
-
-                        switchthemeBtn.tintColor = .white
-
-                        switchthemeBtn.setTitle("Light mode", for: .normal)
-
-                        window?.overrideUserInterfaceStyle = .light
-
-                    } else {
-
-                        switchthemeBtn.tintColor = .darkGray
-
-                        window?.overrideUserInterfaceStyle = .dark
-
-                        switchthemeBtn.setTitle("Dark mode", for: .normal)
-
-                    }
-
-                }
-
-        }
 }

@@ -1,4 +1,11 @@
 //
+//  updateprofil.swift
+//  peddler
+//
+//  Created by iMac on 2/1/2022.
+//
+
+//
 //  CreateNewAccount.swift
 //  peddler
 //
@@ -8,7 +15,7 @@
 import UIKit
 import Foundation
 
-class CreateNewAccount: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class updateprofil: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     //var
     var user: User?
@@ -23,7 +30,7 @@ class CreateNewAccount: UIViewController, UIImagePickerControllerDelegate & UINa
     @IBOutlet weak var CIN: UITextField!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "setRoleSegue"{
+        if segue.identifier == "modifsegue"{
             let destination = segue.destination as! SetRoleViewController
             destination.user = user
         }
@@ -38,12 +45,12 @@ class CreateNewAccount: UIViewController, UIImagePickerControllerDelegate & UINa
     @IBAction func poli(_ sender: Any) {
     }
     
-    @IBAction func Register(_ sender: Any) {
+    @IBAction func Modifier(_ sender: Any) {
         
         user = User(firstName: FirstName.text!, lastName: lastName.text!, cin: CIN.text!, email: email.text!, address: "", password: password.text!, phoneNumber: phoneNumber.text!, role: "User")
         
         
-        self.performSegue(withIdentifier: "setRoleSegue", sender: user)
+        self.performSegue(withIdentifier: "modifsegue", sender: user)
         
         
     }

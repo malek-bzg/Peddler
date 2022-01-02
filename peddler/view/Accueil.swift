@@ -8,13 +8,11 @@
 import UIKit
 
 class Accueil: UIViewController {
-     //var
     
-    
-    
+    //var
     
     //widget
-  
+    
     // Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +23,10 @@ class Accueil: UIViewController {
     // methods
     func changer(){
     }
-
+    
     // Actions
     @IBAction func next(_ sender: Any) {
     }
     
-
+    
 }

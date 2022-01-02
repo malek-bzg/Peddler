@@ -10,13 +10,38 @@ import Braintree
 
 class paypal: UIViewController {
     
+    @IBOutlet weak var checkboxButton: UIButton! {
+        didSet {
+            checkboxButton.addTarget(self, action: #selector(tapCheckbox) , for: .touchUpInside)
+        }
+    }
+    
+    
+    @IBOutlet weak var checkboxPaypal: UIButton! {
+        didSet {
+            checkboxPaypal.addTarget(self, action: #selector(tapCheckboxpaypal), for: .touchUpInside)
+        }
+    }
+    
+    
+    
     var braintreeClient: BTAPIClient!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 // Do any additional setup after loading the view.
-        braintreeClient = BTAPIClient(authorization: "sandbox_8h4t47ng_88hhhc/knwkbyzds")
+        braintreeClient = BTAPIClient(authorization: "sandbox_8h4t49ng_88hhhc7knwk6yzds")
         
+    }
+    @objc
+    func tapCheckbox () {
+        checkboxButton.isSelected = !checkboxButton.isSelected
+       
+    }
+    @objc
+    func tapCheckboxpaypal () {
+        checkboxPaypal.isSelected = !checkboxPaypal.isSelected
+       
     }
     
     
@@ -35,6 +60,7 @@ class paypal: UIViewController {
 
                         // Access additional information
                         let email = tokenizedPayPalAccount.email
+                        debugPrint(email)
                         let firstName = tokenizedPayPalAccount.firstName
                         let lastName = tokenizedPayPalAccount.lastName
                         let phone = tokenizedPayPalAccount.phone

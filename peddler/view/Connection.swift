@@ -9,11 +9,15 @@ import UIKit
 
 class Connection: UIViewController {
     
-    
     //var
+    var role: String?
     
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "setRoleSegue" {
+            let destination = segue.destination as! Connection
+            destination.role = role
+        }
+    }
     
     //widget
 
