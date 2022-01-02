@@ -252,6 +252,7 @@
                         <outlet property="prixLABEL" destination="bmc-aD-ogn" id="ylA-NT-Ev1"/>
                         <outlet property="produitImage" destination="Zi0-iC-fza" id="cez-Mg-Xpw"/>
                         <outlet property="produitLabel" destination="bmc-aD-ogn" id="s6Y-Z0-D5S"/>
+                        <segue destination="Ue4-sN-T84" kind="presentation" modalPresentationStyle="fullScreen" id="RZ1-Nn-myN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qqJ-uI-MLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -577,10 +578,10 @@
             </objects>
             <point key="canvasLocation" x="6364" y="-616"/>
         </scene>
-        <!--Add Produit View Controller-->
+        <!--Modif Produit View Controller-->
         <scene sceneID="JgU-BA-vki">
             <objects>
-                <viewController id="Ue4-sN-T84" customClass="AddProduitViewController" customModule="peddler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ue4-sN-T84" customClass="ModifProduitViewController" customModule="peddler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P66-Sz-Y5U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -617,24 +618,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hem-Ej-YcT">
-                                <rect key="frame" x="20" y="713" width="374" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.68668591980000004" green="0.82417756320000002" blue="0.70671153070000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Add ">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="Add:" destination="Ue4-sN-T84" eventType="touchUpInside" id="9ud-qQ-jvO"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOj-RO-u1P">
                                 <rect key="frame" x="276" y="192" width="64" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="dslr-camera"/>
                                 <connections>
                                     <action selector="addprodImage:" destination="Ue4-sN-T84" eventType="touchUpInside" id="UGr-vS-GMO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hem-Ej-YcT">
+                                <rect key="frame" x="23" y="735" width="374" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.68668591980000004" green="0.82417756320000002" blue="0.70671153070000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Modif">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Add:" destination="Ue4-sN-T84" eventType="touchUpInside" id="9ud-qQ-jvO"/>
+                                    <action selector="Modif:" destination="Ue4-sN-T84" eventType="touchUpInside" id="bx5-Ri-LcD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -645,16 +647,16 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="3pt-AT-nmc"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="information" destination="k2B-2X-faF" id="f8w-zK-T7O"/>
-                        <outlet property="marge" destination="rdo-W6-zXx" id="oWm-HZ-tt5"/>
-                        <outlet property="prix" destination="SSi-P2-axT" id="bXu-Mr-Pgz"/>
-                        <outlet property="produitImage" destination="qOz-a9-LAa" id="mCN-2k-Sad"/>
-                        <outlet property="produitName" destination="Ubm-yN-8Fd" id="Bso-I2-tb1"/>
+                        <outlet property="information" destination="k2B-2X-faF" id="4eb-iX-F0P"/>
+                        <outlet property="marge" destination="rdo-W6-zXx" id="HKl-vR-yZ0"/>
+                        <outlet property="prix" destination="SSi-P2-axT" id="21U-yW-Jdj"/>
+                        <outlet property="produitImage" destination="qOz-a9-LAa" id="hQe-jo-5Nm"/>
+                        <outlet property="produitName" destination="Ubm-yN-8Fd" id="UKw-Mo-TFn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1FQ-rr-fBn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7399" y="117"/>
+            <point key="canvasLocation" x="9087" y="117"/>
         </scene>
         <!--Cart Controller-->
         <scene sceneID="T8K-4Q-fD3">
@@ -1942,7 +1944,7 @@
         <!--Mdp Oublie View-->
         <scene sceneID="fcQ-OE-foH">
             <objects>
-                <viewController id="8ua-1x-Bfn" customClass="MdpOublieView" customModule="Chicky" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8ua-1x-Bfn" customClass="MdpOublieView" customModule="peddler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YFQ-ms-gIG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2056,7 +2058,7 @@
         <!--Confirmation View-->
         <scene sceneID="Obx-04-vBh">
             <objects>
-                <viewController id="KSe-CX-oo0" customClass="ConfirmationView" customModule="Chicky" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KSe-CX-oo0" customClass="ConfirmationView" customModule="peddler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XNG-Ru-nyQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2184,7 +2186,7 @@
         <!--Changer Mdp View-->
         <scene sceneID="vfG-Tx-7vi">
             <objects>
-                <viewController id="cP8-Ou-6eJ" customClass="ChangerMdpView" customModule="Chicky" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cP8-Ou-6eJ" customClass="ChangerMdpView" customModule="peddler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UQR-k8-xCW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2313,10 +2315,90 @@
             </objects>
             <point key="canvasLocation" x="3888" y="-616"/>
         </scene>
+        <!--Add Produit View Controller-->
+        <scene sceneID="LoD-UZ-8tC">
+            <objects>
+                <viewController id="8Vd-5k-F87" customClass="AddProduitViewController" customModule="peddler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fQu-qL-9Hc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unnamed" translatesAutoresizingMaskIntoConstraints="NO" id="IWH-b2-hZF">
+                                <rect key="frame" x="0.0" y="-19" width="414" height="915"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="4146794" translatesAutoresizingMaskIntoConstraints="NO" id="INp-ay-mCJ">
+                                <rect key="frame" x="137" y="130" width="146" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nom produit " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5YV-2e-CG6">
+                                <rect key="frame" x="20" y="341" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="prix" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="csk-65-Tbe">
+                                <rect key="frame" x="20" y="421" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="marge de benifices" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eM4-JV-xNi">
+                                <rect key="frame" x="20" y="499" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="information" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPc-yD-wmj">
+                                <rect key="frame" x="20" y="595" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tG-I2-ccE">
+                                <rect key="frame" x="20" y="713" width="374" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.68668591980000004" green="0.82417756320000002" blue="0.70671153070000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Add ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Add:" destination="8Vd-5k-F87" eventType="touchUpInside" id="l7t-17-cgf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBJ-01-ka6">
+                                <rect key="frame" x="276" y="192" width="64" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="dslr-camera"/>
+                                <connections>
+                                    <action selector="addprodImage:" destination="8Vd-5k-F87" eventType="touchUpInside" id="bVC-Fb-cN2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xYs-4T-hRi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="oHQ-EP-m2x">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="qrF-hh-Wak"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="information" destination="EPc-yD-wmj" id="ueZ-1h-sii"/>
+                        <outlet property="marge" destination="eM4-JV-xNi" id="and-pR-9EY"/>
+                        <outlet property="prix" destination="csk-65-Tbe" id="9lt-P6-VLv"/>
+                        <outlet property="produitImage" destination="INp-ay-mCJ" id="p6y-bK-2yQ"/>
+                        <outlet property="produitName" destination="5YV-2e-CG6" id="50U-Ju-4ey"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGe-vK-uJy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7333" y="127"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="kli-b5-6Rq"/>
         <segue reference="ntd-f7-bxO"/>
+        <segue reference="RZ1-Nn-myN"/>
         <segue reference="2zQ-aj-Ppk"/>
         <segue reference="GmE-KT-ZO6"/>
     </inferredMetricsTieBreakers>

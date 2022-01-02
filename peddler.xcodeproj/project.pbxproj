@@ -40,6 +40,7 @@
 		885B8F2827822C71005D274F /* MdpOublieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B8F2727822C71005D274F /* MdpOublieView.swift */; };
 		885B8F2A27822C8C005D274F /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B8F2927822C8C005D274F /* ConfirmationView.swift */; };
 		885B8F2C27822CA8005D274F /* ChangerMdpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B8F2B27822CA8005D274F /* ChangerMdpView.swift */; };
+		885B8F2E27823354005D274F /* ModifProduitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B8F2D27823354005D274F /* ModifProduitViewController.swift */; };
 		88E5878F2781BB9600FC1BB1 /* updateprofil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E5878E2781BB9600FC1BB1 /* updateprofil.swift */; };
 		CE2C09A927543F610020A4E9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C09A827543F610020A4E9 /* MapViewController.swift */; };
 		CE756FAD27515ED700CDFE55 /* Mapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE756FAC27515ED700CDFE55 /* Mapview.swift */; };
@@ -82,6 +83,7 @@
 		885B8F2727822C71005D274F /* MdpOublieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MdpOublieView.swift; sourceTree = "<group>"; };
 		885B8F2927822C8C005D274F /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		885B8F2B27822CA8005D274F /* ChangerMdpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangerMdpView.swift; sourceTree = "<group>"; };
+		885B8F2D27823354005D274F /* ModifProduitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifProduitViewController.swift; sourceTree = "<group>"; };
 		88E5878E2781BB9600FC1BB1 /* updateprofil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateprofil.swift; sourceTree = "<group>"; };
 		C96F679A6D18F878F29DBD7B /* Pods_peddler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_peddler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2C09A827543F610020A4E9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				885B8F2727822C71005D274F /* MdpOublieView.swift */,
 				885B8F2927822C8C005D274F /* ConfirmationView.swift */,
 				885B8F2B27822CA8005D274F /* ChangerMdpView.swift */,
+				885B8F2D27823354005D274F /* ModifProduitViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				88E5878F2781BB9600FC1BB1 /* updateprofil.swift in Sources */,
 				1064A75D277E1C3D008F3B76 /* CartController.swift in Sources */,
 				1064A74E277DEA57008F3B76 /* ProduitViewModel.swift in Sources */,
+				885B8F2E27823354005D274F /* ModifProduitViewController.swift in Sources */,
 				7B3A4E3C275EB86800A1B526 /* AddProduitViewController.swift in Sources */,
 				1064A759277DEA9A008F3B76 /* DateUtils.swift in Sources */,
 				73A245232743015000EEC7B0 /* Connection.swift in Sources */,
