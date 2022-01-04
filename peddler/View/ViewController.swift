@@ -5,9 +5,9 @@
 //  Created by iMac on 3/1/2022.
 //
 
-import UIKit
+//import UIKit
 
-class Accueil: UIViewController {
+/*class ViewController: UIViewController {
     private let imageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         imageView.image = UIImage(named: "Peddler")
@@ -30,7 +30,7 @@ class Accueil: UIViewController {
     
     private func animated(){
         UIView.animate(withDuration: 1, animations: {
-            let size = self.view.frame.size.width * 1.5
+            let size = self.view.frame.size.width * 3
             let diffX = size - self.view.frame.size.width
             let diffY = self.view.frame.size.height - size
             
@@ -51,4 +51,4 @@ class Accueil: UIViewController {
 
         }
 
-}
+}*/

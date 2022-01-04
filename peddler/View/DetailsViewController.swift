@@ -20,6 +20,12 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var prixLABEL: UILabel!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "modifSeg" {
+            let destination = segue.destination as! ModifProduitViewController
+            destination.produit = produit
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,5 +47,13 @@ class DetailsViewController: UIViewController {
                 self.present(Alert.makeAlert(titre: "Success", message: "Added to cart !"), animated: true)
             }
         }
+    }
+    
+    @IBAction func modifier(_ sender: Any) {
+        print(produit)
+        self.performSegue(withIdentifier: "modifSeg", sender: produit)
+    }
+    @IBAction func supprimer(_ sender: Any) {
+        delete(produit)
     }
 }

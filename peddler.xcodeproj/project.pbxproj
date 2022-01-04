@@ -41,6 +41,7 @@
 		885B8F2A27822C8C005D274F /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B8F2927822C8C005D274F /* ConfirmationView.swift */; };
 		885B8F2C27822CA8005D274F /* ChangerMdpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B8F2B27822CA8005D274F /* ChangerMdpView.swift */; };
 		885B8F2E27823354005D274F /* ModifProduitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B8F2D27823354005D274F /* ModifProduitViewController.swift */; };
+		8871B7BC2783999A005B5134 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8871B7BB2783999A005B5134 /* ViewController.swift */; };
 		88E5878F2781BB9600FC1BB1 /* updateprofil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E5878E2781BB9600FC1BB1 /* updateprofil.swift */; };
 		CE2C09A927543F610020A4E9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C09A827543F610020A4E9 /* MapViewController.swift */; };
 		CE756FAD27515ED700CDFE55 /* Mapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE756FAC27515ED700CDFE55 /* Mapview.swift */; };
@@ -84,6 +85,7 @@
 		885B8F2927822C8C005D274F /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		885B8F2B27822CA8005D274F /* ChangerMdpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangerMdpView.swift; sourceTree = "<group>"; };
 		885B8F2D27823354005D274F /* ModifProduitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifProduitViewController.swift; sourceTree = "<group>"; };
+		8871B7BB2783999A005B5134 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		88E5878E2781BB9600FC1BB1 /* updateprofil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateprofil.swift; sourceTree = "<group>"; };
 		C96F679A6D18F878F29DBD7B /* Pods_peddler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_peddler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2C09A827543F610020A4E9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				885B8F2927822C8C005D274F /* ConfirmationView.swift */,
 				885B8F2B27822CA8005D274F /* ChangerMdpView.swift */,
 				885B8F2D27823354005D274F /* ModifProduitViewController.swift */,
+				8871B7BB2783999A005B5134 /* ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				1064A756277DEA9A008F3B76 /* ImageLoader.swift in Sources */,
 				7BDE3885276629AE0084B4CF /* home.swift in Sources */,
 				1064A761277E2277008F3B76 /* UserHome.swift in Sources */,
+				8871B7BC2783999A005B5134 /* ViewController.swift in Sources */,
 				1064A741277DE9B4008F3B76 /* Panier.swift in Sources */,
 				885B8F2827822C71005D274F /* MdpOublieView.swift in Sources */,
 				1064A75B277DFC97008F3B76 /* SetRoleViewController.swift in Sources */,

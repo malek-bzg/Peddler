@@ -18,12 +18,38 @@ public class UserViewModel: ObservableObject{
         AF.request(HOST + "user/register",
                    method: .post,
                    parameters: [
-                    "firstName": user.email,
-                    "lastName": user.email,
+                    "firstName": user.firstName,
+                    "lastName": user.lastName,
                     "cin": user.cin,
                     "email": user.email,
                     "address": user.address,
                     "password": user.password,
+                    "phoneNumber": user.phoneNumber,
+                    "role": user.role
+                   ])
+            .validate(statusCode: 200..<300)
+            .validate(contentType: ["application/json"])
+            .responseData { response in
+                switch response.result {
+                case .success:
+                    print("Validation Successful")
+                    completed(true)
+                case let .failure(error):
+                    print(error)
+                    completed(false)
+                }
+            }
+    }
+    
+    func editProfile(user: User, completed: @escaping (Bool) -> Void) {
+        AF.request(HOST + "user/edit-profile",
+                   method: .put,
+                   parameters: [
+                    "firstName": user.firstName,
+                    "lastName": user.lastName,
+                    "cin": user.cin,
+                    "email": user.email,
+                    "address": user.address,
                     "phoneNumber": user.phoneNumber,
                     "role": user.role
                    ])
@@ -175,6 +201,42 @@ public class UserViewModel: ObservableObject{
                 }
             }
     }
+    func motDePasseOublie(email: String, codeDeReinit: String, completed: @escaping (Bool) -> Void) {
+        AF.request(HOST + "user/forgot-password",
+                   method: .post,
+                   parameters: ["email": email, "codeDeReinit": codeDeReinit])
+            .validate(statusCode: 200..<300)
+            .validate(contentType: ["application/json"])
+            .responseData { response in
+                switch response.result {
+                case .success:
+                    print("Validation Successful")
+                    completed(true)
+                case let .failure(error):
+                    print(error)
+                    completed(false)
+                }
+            }
+    }
+    
+    func changerMotDePasse(email: String, nouveauMotDePasse: String, completed: @escaping (Bool) -> Void) {
+        AF.request(HOST + "user/changepass",
+                   method: .put,
+                   parameters: ["email": email,"nouveauMotDePasse": nouveauMotDePasse])
+            .validate(statusCode: 200..<300)
+            .validate(contentType: ["application/json"])
+            .responseData { response in
+                switch response.result {
+                case .success:
+                    print("Validation Successful")
+                    completed(true)
+                case let .failure(error):
+                    print(error)
+                    completed(false)
+                }
+            }
+    }
+    
     
     func makeUser(jsonItem: JSON) -> User {
         User(

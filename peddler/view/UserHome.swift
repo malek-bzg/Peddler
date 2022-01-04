@@ -59,6 +59,10 @@ class UserHome: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         if segue.identifier == "mSegue" {
             let destination = segue.destination as! DetailsViewController
             destination.produit = currentProduit
+        } else if segue.identifier ==  "updateProf" {
+            let destination = segue.destination as! updateprofil
+            destination.user = currentUser
+            
         }
         
     }
@@ -141,6 +145,12 @@ class UserHome: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         dismiss(animated: true, completion: nil)
     }
     
+    
+    
+    @IBAction func modifProfile(_ sender: Any) {
+        print(currentUser)
+        performSegue(withIdentifier: "updateProf", sender: currentUser)
+    }
     @IBAction func logout(_ sender: Any) {
         
     }

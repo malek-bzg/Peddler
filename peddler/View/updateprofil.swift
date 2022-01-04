@@ -20,6 +20,8 @@ class updateprofil: UIViewController, UIImagePickerControllerDelegate & UINaviga
     //var
     var user: User?
     
+    
+    
     //widget
     @IBOutlet weak var FirstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
@@ -38,10 +40,21 @@ class updateprofil: UIViewController, UIImagePickerControllerDelegate & UINaviga
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        initialize()
     }
     
+    func initialize() {
+        FirstName.text = user?.firstName
+        lastName.text = user?.lastName
+        phoneNumber.text = user?.phoneNumber
+        email.text = user?.email
+        password.text = user?.password
+        ConfirmPass.text = user?.password
+        CIN.text = user?.cin
+    }
     //Action
+    
     @IBAction func poli(_ sender: Any) {
     }
     
@@ -50,7 +63,11 @@ class updateprofil: UIViewController, UIImagePickerControllerDelegate & UINaviga
         user = User(firstName: FirstName.text!, lastName: lastName.text!, cin: CIN.text!, email: email.text!, address: "", password: password.text!, phoneNumber: phoneNumber.text!, role: "User")
         
         
-        self.performSegue(withIdentifier: "modifsegue", sender: user)
+        UserViewModel.sharedInstance.editProfile(user: user!) { success in
+            if success {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
         
         
     }
