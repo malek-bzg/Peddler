@@ -9,6 +9,9 @@ import UIKit
 import CoreData
 import GoogleSignIn
 import Braintree
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        AppCenter.start(withAppSecret: "ddade0de-8610-494b-b099-3f81d5cdfa18", services:[
+          Analytics.self,
+          Crashes.self
+        ])
         BTAppSwitch.setReturnURLScheme("com.peddler.payments")
         
 
